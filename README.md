@@ -12,8 +12,6 @@
 - Dataset Collection
 	- Mayur
 
-- Creating logical replies for specific health issues
+- Creating logical replies for specific health issues and Greeting sentence collection
 	- Vraj
-
-- Greeting sentence collection
 	- Ayushi
