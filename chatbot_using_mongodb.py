@@ -13,8 +13,6 @@ bot = ChatBot(
             'import_path': 'custom_logic_adapter.MyLogicAdapter'
         }
     ],
-    # database='myFirstDatabase',
-    # database_uri='mongodb+srv://admin992:8733981820@cluster0.mgtom.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
 )
 
 print('Type something to begin...')
