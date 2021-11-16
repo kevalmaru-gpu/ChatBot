@@ -27,8 +27,8 @@
 
 ## Main working 
 - Rasa
-- NLTK
+- NLTK (Hard Coded replies)
 - Chaterbot
 
 ## Backup 
-- Tinker gui
+- Tinker gui (Hard Coded replies)
