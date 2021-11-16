@@ -8,10 +8,8 @@ def send():
     message = "You ->" + e.get()
     txt.insert(END, "\n" + message)
 
-    if e.get() == 'hi' or e.get() == 'hello' or e.get() == 'my animal is not ok' :
-        txt.insert(END, "\n"+"Bot -> Hi, How can i help you ?")
-    elif e.get() == 'i need help':
-        txt.insert(END, "\n"+"Bot -> Ok, Please Enter your name.")
+    if e.get() == 'hi' or e.get() == 'hello' or e.get() == 'my animal is not ok' or e.get() == 'i need help':
+        txt.insert(END, "\n"+"Bot -> Please Enter your name.")
     else:
         txt.insert(END, "\n" + "Bot -> Sorry I didn't get you")
 
