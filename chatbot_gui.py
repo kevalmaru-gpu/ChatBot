@@ -3,6 +3,9 @@ from tkinter import *
 root = Tk()
 root.configure(background="black")
 
+name = ""
+number = ""
+email = ""
 
 def send():
     message = "You ->" + e.get()
@@ -10,6 +13,15 @@ def send():
 
     if e.get() == 'hi' or e.get() == 'hello' or e.get() == 'my animal is not ok' or e.get() == 'i need help':
         txt.insert(END, "\n"+"Bot -> Please Enter your name.")
+    elif str(e.get()).startswith("my name is"):
+        name = str(e.get()).split(" ",3)[3]
+        txt.insert(END, "\n"+f"Bot -> Ok, please enter your number.")
+    elif str(e.get()).startswith("my number is"):
+        name = str(e.get()).split(" ",3)[3]
+        txt.insert(END, "\n"+f"Bot -> Ok, please enter your email.")
+    elif str(e.get()).startswith("my email is"):
+        name = str(e.get()).split(" ",3)[3]
+        txt.insert(END, "\n"+f"Bot -> Ok, thank you.")
     else:
         txt.insert(END, "\n" + "Bot -> Sorry I didn't get you")
 
