@@ -17,10 +17,10 @@ def send():
         name = str(e.get()).split(" ",3)[3]
         txt.insert(END, "\n"+f"Bot -> Ok, please enter your number.")
     elif str(e.get()).startswith("my number is"):
-        name = str(e.get()).split(" ",3)[3]
+        number = str(e.get()).split(" ",3)[3]
         txt.insert(END, "\n"+f"Bot -> Ok, please enter your email.")
     elif str(e.get()).startswith("my email is"):
-        name = str(e.get()).split(" ",3)[3]
+        email = str(e.get()).split(" ",3)[3]
         txt.insert(END, "\n"+f"Bot -> Ok, thank you.")
     else:
         txt.insert(END, "\n" + "Bot -> Sorry I didn't get you")
