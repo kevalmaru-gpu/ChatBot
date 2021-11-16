@@ -15,7 +15,7 @@
 	- Ayushi
 
 
-##Project Review (15th NOV 2021)
+## Project Review (15th NOV 2021)
 
 - Savan -> Logic & code
 - Jap -> MongoDB commands & excel sheet dataset
@@ -24,3 +24,11 @@
 - Mayur -> Data collection and excel sheet dataset
 - Vraj -> No Communication 
 - Ayushi -> No Communication 
+
+## Main working 
+- Rasa
+- NLTK (Hard Coded replies)
+- Chaterbot
+
+## Backup 
+- Tinker gui (Hard Coded replies)
