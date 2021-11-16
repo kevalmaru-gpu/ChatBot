@@ -1,34 +1,11 @@
-# ChatBot
+<!--headings-->
+## welcome! chat box readme.md profile
+## how to use?
+<!--blockquotes-->
+This chatbox can be used when an animal is injured or in a bad condition. the owner can use this chatbot to get an instant solution if available or to get available doctors nearby.
 
-- Chatterbot logic
-	- Savan 
-	- Hiren
-	- Keval 
-- Database interaction
-	- Jap
-	- Savan 
-
-- Dataset Collection
-	- Mayur 
-- Creating logical replies for specific health issues and Greeting sentence collection
-	- Vraj
-	- Ayushi
-
-
-## Project Review (15th NOV 2021)
-
-- Savan -> Logic & code
-- Jap -> MongoDB commands & excel sheet dataset
-- Hiren -> Excel sheet dataset 
-- Keval -> Code & logic
-- Mayur -> Data collection and excel sheet dataset
-- Vraj -> No Communication 
-- Ayushi -> No Communication 
-
-## Main working 
-- Rasa
-- NLTK (Hard Coded replies)
-- Chaterbot
-
-## Backup 
-- Tinker gui (Hard Coded replies)
+##Menu
+<!--italic-->
+1. Logic
+2. Code
+3. Mongodb
