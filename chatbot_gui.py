@@ -2,7 +2,6 @@
 # mongodb+srv://admin992:8733981820@cluster0.mgtom.mongodb.net/prj1?retryWrites=true&w=majority
 
 from tkinter import *
-from typing import List
 from pymongo import MongoClient, results
 
 #Step 1: Connect to MongoDB - Note: Change connection string as needed
@@ -17,11 +16,15 @@ user_info = {
     "a_symptoms": "",
 }
 
-grammer_world = ["my","is","a","an","are","not","like","name","number","address","animal","symptoms","symtoms",","," "]
+grammer_words = ["my","is","a","an","are","not","like","name","number","address","animal","symptoms","symtoms","symtom","symptom",","," "]
 
 def find_word(to_find,array):
     """
+<<<<<<< HEAD
+        this function will return any particular word from list of string
+=======
         this function will return any prticular word from list of string
+>>>>>>> 70f9b65f9193e0be8537538765db51685db365d8
     """
     for i in array:
         if i == to_find:
@@ -31,27 +34,33 @@ def find_word(to_find,array):
 
 def differ_entity(array):
     """
-        this function will return any word or list of word which are not grammetical and which could be our user data
+        this function will return any word or list of word which are not grammer_word list and could be user data
     """
     is_differ = None
     entities = []
 
-    for i in array:
-        for y in grammer_world:
+    for i in array: # looping through string list
+        for y in grammer_words: # looping a string list through grammer_word list
+            """
+            if once the string element is equal to one of the grammer_word list element
+            then is_differ will set to false which is sign that it is not a user data
+            is_differ will stay True if the string is user data
+            """
             if i == y:
-                is_differ = False
+                is_differ = False 
         
+        # appending string
         if is_differ == True:
             entities.append(i)
         
         is_differ = True
 
-    if len(entities) == 1:
+    if len(entities) == 1: # if user has provided data in one word
         return entities[0]
-    elif len(entities) == 0:
+    elif len(entities) == 0: # if user havent provided any data
         return 0
-    elif len(entities) > 1:
-        return entities
+    elif len(entities) > 1: # if user has provided multiple data (Which will return a list)
+        return entities 
 
 
 def send(info):    
@@ -113,7 +122,7 @@ def send(info):
         else:
             txt.insert(END, "\n"+f"Bot -> Invalid response.")
 
-    elif (find_word("animal",input_text_array) and find_word("is",input_text_array)):
+    elif ((find_word("animal",input_text_array) and find_word("name",input_text_array))):
         differed_entity = differ_entity(input_text_array)
 
         if differed_entity != 0:
@@ -123,7 +132,7 @@ def send(info):
         else:
             txt.insert(END, "\n"+f"Bot -> Invalid response.")
             
-    elif find_word("symptoms",input_text_array) or find_word("symptoms",input_text_array) or find_word("symtom"):
+    elif find_word("symptoms",input_text_array) or find_word("symptoms",input_text_array) or find_word("symtom",input_text_array):
         result=db.chatbot_user.insert_one(user_info)
         differed_entity = differ_entity(input_text_array)
 
