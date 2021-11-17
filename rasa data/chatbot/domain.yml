@@ -1,0 +1,95 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - help
+  - send_name
+  - send_number
+  - send_address
+  - send_animal_name
+  - send_animal_symptoms
+  - out_of_scope
+
+entities:
+  - name
+  - number
+  - address
+  - animal_name
+  - animal_symptoms
+
+slots:
+  name:
+    type: unfeaturized
+  number:
+    type: unfeaturized
+  addres:
+    type: unfeaturized
+  animal_name:
+    type: unfeaturized
+  animal_symptoms:
+    type: unfeaturized
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_help
+  - utter_send_name
+  - utter_send_number
+  - utter_address
+  - utter_animal_name
+  - utter_animal_symptom
+  - utter_out_of_scope
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_help:
+  - test: "Hello, what is your name ?"
+
+  utter_send_name:
+  - test: "Hello, what is your number ?"
+
+  utter_send_number:
+  - test: "Hello, what is your address ?"
+
+  utter_address:
+  - test: "Hello, what is your address ?"
+
+  utter_animal_name:
+  - test: "Hello, what is your animal name ?"
+
+  utter_animal_symptoms:
+  - test: "Hello, what is your animal symptoms ?"
+
+  utter_out_of_scope:
+  - test: "Lol nice joke!"
+
+session_config:
+  session_expiration_time: 120
+  carry_over_slots_to_new_session: true
