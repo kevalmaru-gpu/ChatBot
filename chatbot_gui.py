@@ -21,7 +21,7 @@ grammer_world = ["my","is","a","an","are","not","like","name","number","address"
 
 def find_word(to_find,array):
     """
-        this function will return any perticular word from list of string
+        this function will return any prticular word from list of string
     """
     for i in array:
         if i == to_find:
