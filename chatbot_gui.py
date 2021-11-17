@@ -1,22 +1,22 @@
-from tkinter import *
-from functools import partial
+# db url
+# mongodb+srv://admin992:8733981820@cluster0.mgtom.mongodb.net/prj1?retryWrites=true&w=majority
 
-"""
-    all user info will get stored in user_info dict
-    
-    in user_info dictionary 1 is name
-                            2 is number
-                            3 is address
-                            4 is animal name
-                            5 is animal symptoms
-"""
+from tkinter import *
+
+from pymongo import MongoClient
+
+#Step 1: Connect to MongoDB - Note: Change connection string as needed
+client = MongoClient("mongodb+srv://admin992:8733981820@cluster0.mgtom.mongodb.net/prj1?retryWrites=true&w=majority")
+db = client.business
+
+
 
 user_info = {
-    1: "",
-    2: "",
-    3: "",
-    4: "",
-    5: "",
+    "name": "",
+    "number": "",
+    "address": "",
+    "a_name": "",
+    "a_symptoms": "",
 }
 
 def send(info):    
@@ -29,21 +29,22 @@ def send(info):
     if e.get() == 'hi' or e.get() == 'hello' or e.get() == 'my animal is not ok' or e.get() == 'i need help':
         txt.insert(END, "\n"+"Bot -> Please Enter your name.")
     elif input_text.startswith("my name is"):
-        info[1] = str(e.get()).split(" ",3)[3]
+        info["name"] = str(e.get()).split(" ",3)[3]
         txt.insert(END, "\n"+f"Bot -> Ok, please enter your number.")
     elif input_text.startswith("my number is"):
-        info[2] = str(e.get()).split(" ",3)[3]
+        info["number"] = str(e.get()).split(" ",3)[3]
         txt.insert(END, "\n"+f"Bot -> Ok, please enter your address.")
     elif input_text.startswith("my address is"):
-        info[3] = str(e.get()).split(" ",3)[3]
+        info["address"] = str(e.get()).split(" ",3)[3]
         txt.insert(END, "\n"+f"Bot -> Ok, what is your animal name?")
     elif input_text.startswith("my animal name is"):
-        info[4] = str(e.get()).split(" ",4)[4]
+        info["a_name"] = str(e.get()).split(" ",4)[4]
         txt.insert(END, "\n"+f"Bot -> Ok, what are the symptoms?")
     elif input_text.startswith("symptoms are,"):
-        info[5] = str(e.get()).split(" ",2)[2]
+        info["a_symptoms"] = str(e.get()).split(" ",2)[2]
+        result=db.chatbot_user.insert_one(user_info)
 
-        if info[1] == "" or info[2] == "" or info[3] == "" or info[4] == "" or info[5] == "":
+        if info["name"] == "" or info["number"] == "" or info["address"] == "" or info["a_name"] == "" or info["a_symptoms"] == "":
             txt.insert(END, "\n"+f"Bot -> You have not given us some of your information.")
         else:
             txt.insert(END, "\n"+f"Bot -> Ok, this is your solution.")
@@ -66,3 +67,6 @@ e.grid(row=1, column=0)
 root.title("ChatBot")
 
 root.mainloop()
+
+
+
