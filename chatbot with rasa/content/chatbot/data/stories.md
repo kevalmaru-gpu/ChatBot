@@ -51,3 +51,23 @@
 
 * out_of_scope
   - utter_out_of_scope
+
+## store data to excel deny Story
+* add_data
+  - Form_Info
+  - form{"name": "Form_Info"}
+  - form{"name": null}
+* deny
+  - utter_goodbye
+  
+## store data to excel affirm Story
+* add_data
+  - Form_Info
+  - form{"name": "Form_Info"}
+  - form{"name": null}
+* affirm
+  - action_save_data
+  
+## fetch info
+* ask_info{"column":"number","addres","animal_name","animal_symptoms":"trainer"}
+  - action_fetch_data
