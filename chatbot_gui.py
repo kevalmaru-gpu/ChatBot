@@ -20,11 +20,7 @@ grammer_words = ["my","is","a","an","are","not","like","name","number","address"
 
 def find_word(to_find,array):
     """
-<<<<<<< HEAD
         this function will return any particular word from list of string
-=======
-        this function will return any prticular word from list of string
->>>>>>> 70f9b65f9193e0be8537538765db51685db365d8
     """
     for i in array:
         if i == to_find:
