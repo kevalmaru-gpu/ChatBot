@@ -2,7 +2,6 @@
 # mongodb+srv://admin992:8733981820@cluster0.mgtom.mongodb.net/prj1?retryWrites=true&w=majority
 
 from tkinter import *
-from functools import partial
 
 from pymongo import MongoClient
 
