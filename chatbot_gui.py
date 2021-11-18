@@ -129,7 +129,8 @@ def send(info):
             txt.insert(END, "\n"+f"Bot -> Invalid response.")
             
     elif find_word("symptoms",input_text_array) or find_word("symptoms",input_text_array) or find_word("symtom",input_text_array):
-        result=db.chatbot_user.insert_one(user_info)
+        #result=db.chatbot_user.insert_one(user_info)
+
         differed_entity = differ_entity(input_text_array)
 
         if differed_entity != 0 and type(differed_entity) != list:
@@ -146,7 +147,17 @@ def send(info):
             return
 
         if info["name"] == "" or info["number"] == "" or info["address"] == "" or info["a_name"] == "" or info["a_symptoms"] == "":
-            txt.insert(END, "\n"+f"Bot -> You have not given us some of your information.")
+            txt.insert(END, "\n"+f"Bot -> Please provide your,")
+            if info["name"] == "":
+                txt.insert(END, "\n\t"+f"Name")
+            if info["number"] == "":
+                txt.insert(END, "\n\t"+f"Number")
+            if info["address"] == "":
+                txt.insert(END, "\n\t"+f"Address")
+            if info["a_name"] == "":
+                txt.insert(END, "\n\t"+f"Animal name")
+            if info["a_symptoms"] == "":
+                txt.insert(END, "\n\t"+f"Symptoms of your animal")
         else:
             # conversation will end here
             txt.insert(END, "\n"+f"Bot -> Ok, this is your solution.")
@@ -169,6 +180,3 @@ e.grid(row=1, column=0)
 root.title("ChatBot")
 
 root.mainloop()
-
-
-
