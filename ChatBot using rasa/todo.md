@@ -1,0 +1,7 @@
+- Add condition in rules.yml
+- Store user info to database in action.py
+- At the end of conversation:
+	- Fetch solution data from database
+	- Compare symptoms
+	- Display matching solution
+	- Or display available doctors contact info

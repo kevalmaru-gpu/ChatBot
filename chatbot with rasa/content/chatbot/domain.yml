@@ -33,23 +33,7 @@ slots:
   animal_symptoms:
     type: unfeaturized
 
-actions:
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_help
-  - utter_send_name
-  - utter_send_number
-  - utter_address
-  - utter_animal_name
-  - utter_animal_symptom
-  - utter_out_of_scope
-
-templates:
+responses:
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -90,6 +74,28 @@ templates:
   utter_out_of_scope:
   - test: "Lol nice joke!"
 
+forms:
+  - Form_Info
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_help
+  - utter_send_name
+  - utter_send_number
+  - utter_address
+  - utter_animal_name
+  - utter_animal_symptom
+  - utter_out_of_scope
+  - action_save_data
+  - action_fetch_data
+
+
 session_config:
-  session_expiration_time: 120
+  session_expiration_time: 60
   carry_over_slots_to_new_session: true

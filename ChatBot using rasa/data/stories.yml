@@ -1,0 +1,17 @@
+stories:
+ - story: greet
+   steps:
+   - intent: greet
+   - action: utter_greet
+ - story: need help
+   steps:
+   - intent: send_name
+   - action: utter_name
+   - intent: send_number
+   - action: utter_number
+   - intent: send_address
+   - action: utter_address
+   - intent: send_animal_name
+   - action: utter_animal_name
+   - intent: send_animal_symptoms
+   - action: utter_animal_symptoms

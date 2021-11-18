@@ -1,0 +1,21 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+    utter_name:
+        - text: |
+            Ok, send your number
+    utter_number:
+        - text: |
+            Ok, send your address
+    utter_address:
+        - text: |
+            Ok, send your animal name
+    utter_animal_name:
+        - text: |
+            Ok, what symptoms you have seen in your animal ?
+    utter_animal_symptoms:
+        - text: |
+            Ok, we will provide you a solution

@@ -93,7 +93,7 @@
 - i don't care!!!!
 - i do not care how are you
 - again?
-- oh wait i gave you my work email address can i change it?
+- oh wait i gave you my  address can i change it?
 - hang on let me find it
 - stop it, i do not care!!!
 - how come?
@@ -112,3 +112,24 @@
 - talk to me
 - who is your favourite robot?
 - can you help me to build a bot
+
+## intent:add_data
+- i want to add some data to the excel sheet
+- i want to add the user data to the excel sheet
+- add user data
+- ask me some questions to add the user data
+- what information is required to add the data to the excel sheet
+
+## intent:add_data
+- i want to add some data to the excel sheet
+- i want to add the user data to the excel sheet
+- add user data
+- ask me some questions to add the user data
+- what information is required to add the data to the excel sheet
+
+## intent:ask_info
+- list out the [addres]{"entity":"column","value":"addres"} of the user who's animal_name is [trainer]{"entity":"animal_name","value":"trainer"}
+- list out the [name]{"entity":"column","value":"name"} of the user who's animal_name is [dog]
+{"entity":"animal_name","value":"dog"}
+- tell me the [mobile number]{"entity":"column","value":"number"} of the user whose animal_name is [cow]{"entity":"animal_name","value":"cow"}
+- tell me the [mobile animal_symptoms]{"entity":"column","value":"animal_symptoms"} of the user whose animal_name is [cow]{"entity":"animal_symptoms","value":" "}

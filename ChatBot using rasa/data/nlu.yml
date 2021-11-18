@@ -1,0 +1,43 @@
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey!
+    - Hallo
+    - Good day
+    - Good morning
+- intent: send_name
+  examples: |
+    - my name is reyna
+    - i am jett
+    - you can call me phoenix
+    - name is killjoy
+
+- intent: send_number
+  examples: |
+    - my number is 0000000000
+    - number is 1111111111
+    - you can contact me on 2222222222
+    - my number 3333333333
+
+- intent: send_address
+  examples: |
+    - my address is sector 2
+    - i live in gandhinagar
+    - address is gujarat
+    - address canada
+
+- intent: send_animal_name
+  examples: |
+    - my animal is a cat
+    - my animal name is cat
+    - animal cat
+    - animal name is cat
+
+- intent: send_animal_symptoms
+  examples: |
+    - my animal is feeling stomach pain
+    - my animal is suffering from headach
+    - animal is not feeling well 
+    - he is not in good condition
+

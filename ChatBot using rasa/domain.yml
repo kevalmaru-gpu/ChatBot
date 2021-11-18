@@ -1,0 +1,61 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- send_name
+- send_number
+- send_address
+- send_animal_name
+- send_animal_symptoms
+# slots:
+#   name:
+#     type: influence_conversation
+#   number:
+#     type: influence_conversation
+#   email:
+#     type: influence_conversation
+#   animal_name:
+#     type: influence_conversation
+#   animal_symptoms:
+#     type: influence_conversation
+responses:
+  utter_greet:
+  - text: |
+      Hello
+  utter_name:
+  - text: |
+      Ok, send your number
+  utter_number:
+  - text: |
+      Ok, send your address
+  utter_address:
+  - text: |
+      Ok, send your animal name
+  utter_animal_name:
+  - text: |
+      Ok, what symptoms you have seen in your animal ?
+  utter_animal_symptoms:
+  - text: |
+      Ok, we will provide you a solution
+actions:
+- '...'
+- utter_name
+- utter_number
+- utter_address
+- utter_animal_name
+- utter_animal_symptoms
+forms:
+  chatbot_form:
+    required_slots:
+      name:
+      - type: from_text
+      number:
+      - type: from_text
+      address:
+      - type: from_text
+      animal_name:
+      - type: from_text
+      animal_symptoms:
+      - type: from_text

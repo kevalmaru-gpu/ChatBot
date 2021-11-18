@@ -1,0 +1,21 @@
+rules:
+ - rule: user will send name
+   steps:
+   - intent: send_name
+   - action: utter_name
+ - rule: user will send number
+   steps:
+   - intent: send_number
+   - action: utter_number
+ - rule: user will send address
+   steps:
+   - intent: send_address
+   - action: utter_address
+ - rule: user will send animal name
+   steps:
+   - intent: send_animal_name
+   - action: utter_animal_name
+ - rule: user will send animal symptoms
+   steps:
+   - intent: send_animal_symptoms
+   - action: utter_animal_symptoms
