@@ -179,4 +179,8 @@ send_button = Button(root, text="send", command=lambda:send(user_info)).grid(row
 e.grid(row=1, column=0)
 root.title("ChatBot")
 
+<<<<<<< HEAD
 root.mainloop()
+=======
+root.mainloop()
+>>>>>>> 97291e0ab336883791da52e084cf13790b119bfc

@@ -70,4 +70,8 @@
   
 ## fetch info
 * ask_info{"column":"number","addres","animal_name","animal_symptoms":"trainer"}
+<<<<<<< HEAD
   - action_fetch_data
+=======
+  - action_fetch_data
+>>>>>>> 97291e0ab336883791da52e084cf13790b119bfc

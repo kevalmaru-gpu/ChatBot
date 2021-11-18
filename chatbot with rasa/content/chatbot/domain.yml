@@ -98,4 +98,8 @@ actions:
 
 session_config:
   session_expiration_time: 60
+<<<<<<< HEAD
   carry_over_slots_to_new_session: true
+=======
+  carry_over_slots_to_new_session: true
+>>>>>>> 97291e0ab336883791da52e084cf13790b119bfc
